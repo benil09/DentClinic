@@ -1,11 +1,14 @@
-import { SignInButton, SignUpButton } from "@clerk/nextjs";
+"use client";
+import { SignInButton, SignUpButton, useUser, UserButton } from "@clerk/nextjs";
 import Image from "next/image";
 import Link from "next/link";
 import { Button } from "../ui/button";
 
 const header = () => {
+  const { isSignedIn } = useUser();
+
   return (
-    <nav className="fixwd-top top-0 right-0 left-0 z-50 px-6 py-2 border-b border-border/50 bg-background/80 backdrop-blur-md h-16">
+    <nav className="fixed  top-0 right-0 left-0 z-50 px-6 py-2 border-b border-border/50 bg-background/80 backdrop-blur-md h-16">
       <div className=" max-w-6xl mx-auto flex justify-between items-center">
         <Link href="/" className="flex items-center gap-2">
           <Image
@@ -24,12 +27,18 @@ const header = () => {
         </div>
 
         <div className="flex items-center gap-4">
-          <SignInButton>
-            <Button className="border" variant={"ghost"} >Login</Button>
-          </SignInButton>
-          <SignUpButton>
-           <Button>Sign up</Button>
-          </SignUpButton>
+          {isSignedIn ? (
+            <UserButton afterSignOutUrl="/" />
+          ) : (
+            <>
+              <SignInButton mode="modal">
+                <Button className="border" variant={"ghost"}>Login</Button>
+              </SignInButton>
+              <SignUpButton mode="modal">
+                <Button>Sign up</Button>
+              </SignUpButton>
+            </>
+          )}
         </div>
 
       </div>
