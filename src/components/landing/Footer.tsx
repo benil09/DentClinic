@@ -2,10 +2,10 @@ import Image from "next/image";
 
 function Footer() {
   return (
-    <footer className="px-6 py-12 border-t bg-muted/30">
-      <div className="max-w-6xl mx-auto">
-        <div className="grid md:grid-cols-4 gap-8">
-          <div className="space-y-4">
+    <footer className="px-4 sm:px-6 md:px-8 lg:px-12 py-10 md:py-14 border-t bg-muted/30">
+      <div className="max-w-7xl mx-auto w-full">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-10 sm:gap-8">
+          <div className="space-y-4 text-center sm:text-left">
             <div className="flex items-center gap-2">
               <Image
                 src="/logo.png"
@@ -16,13 +16,16 @@ function Footer() {
               />
               <span className="font-semibold text-lg">DentWise</span>
             </div>
-            <p className="text-sm text-muted-foreground">
+            <p className="text-sm text-muted-foreground leading-relaxed">
               AI-powered dental assistance that actually helps.
             </p>
           </div>
 
+         {/* // <div className="flex justify-between p-4"> */}
+
+          
           <div>
-            <h4 className="font-medium mb-3">Product</h4>
+            <h4 className="font-semibold text-base mb-4">Product</h4>
             <ul className="space-y-2 text-sm text-muted-foreground">
               <li>
                 <a href="#" className="hover:text-foreground">
@@ -43,7 +46,7 @@ function Footer() {
           </div>
 
           <div>
-            <h4 className="font-medium mb-3">Support</h4>
+            <h4 className="font-semibold text-base mb-4">Support</h4>
             <ul className="space-y-2 text-sm text-muted-foreground">
               <li>
                 <a href="#" className="hover:text-foreground">
@@ -64,7 +67,7 @@ function Footer() {
           </div>
 
           <div>
-            <h4 className="font-medium mb-3">Legal</h4>
+            <h4 className="font-semibold text-base mb-4">Legal</h4>
             <ul className="space-y-2 text-sm text-muted-foreground">
               <li>
                 <a href="#" className="hover:text-foreground">
@@ -83,10 +86,14 @@ function Footer() {
               </li>
             </ul>
           </div>
+          {/* </div> */}
         </div>
 
-        <div className="border-t mt-8 pt-8 text-center text-sm text-muted-foreground">
-          <p>&copy; {new Date().getFullYear()} DentWise. Built for real people with real dental questions.</p>
+        <div className="border-t mt-10 pt-6 text-center text-xs sm:text-sm text-muted-foreground px-4">
+          <p>
+            &copy; {new Date().getFullYear()} DentWise. Built for real people
+            with real dental questions.
+          </p>
         </div>
       </div>
     </footer>

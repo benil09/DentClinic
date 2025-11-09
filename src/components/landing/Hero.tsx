@@ -1,15 +1,17 @@
+"use client";
 import Image from "next/image";
 import Link from "next/link";
 import { Button } from "../ui/button";
 import { SignUpButton } from "@clerk/nextjs";
 import { CalendarIcon, MicIcon } from "lucide-react";
+import { motion } from "framer-motion";
 
 const Hero = () => {
   return (
     <section className="relative overflow-hidden pt-28 pb-20 bg-background text-foreground">
       {/* Background Grid */}
       <div className="absolute inset-0 bg-gradient-to-br from-background via-muted/10 to-primary/5">
-        <div className="absolute inset-0 bg-[linear-gradient(to_right,#e2e8f0_1px,transparent_1px),linear-gradient(to_bottom,#e2e8f0_1px,transparent_1px)] bg-[size:3.5rem_3.5rem] [mask-image:radial-gradient(ellipse_70%_60%_at_50%_0%,#000_70%,transparent_120%)] opacity-15"></div>
+        <div className="absolute inset-0 bg-[linear-gradient(to_right,#FFA500_1px,transparent_1px),linear-gradient(to_bottom,#FFA500_1px,transparent_1px)] bg-[size:3.5rem_3.5rem] [mask-image:radial-gradient(ellipse_70%_60%_at_50%_0%,#000_70%,transparent_120%)] opacity-15"></div>
       </div>
 
       {/* Gradient Orbs */}
@@ -23,25 +25,44 @@ const Hero = () => {
           {/* Badge */}
           <div className="inline-flex items-center gap-2 px-4 py-2 mb-6 bg-gradient-to-r from-primary/10 to-primary/5 rounded-full border border-primary/20 backdrop-blur-sm">
             <div className="w-2 h-2 bg-primary rounded-full animate-pulse"></div>
-            <span className="text-sm font-medium text-primary tracking-wide">
+            <motion.span
+              className="text-sm font-medium text-primary tracking-wide bg-clip-text text-transparent bg-gradient-to-r from-primary via-foreground to-primary animate-gradient"
+              animate={{ backgroundPosition: ["0%", "100%"] }}
+              transition={{ repeat: Infinity, duration: 3, ease: "linear" }}
+            >
               AI-Powered Dental Assistant
-            </span>
+            </motion.span>
           </div>
 
           {/* Heading */}
-          <h1 className="text-4xl md:text-6xl font-extrabold leading-tight mb-6">
+          <motion.h1
+            className="text-4xl md:text-6xl font-extrabold leading-tight mb-6"
+            initial={{ opacity: 0, y: 40 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, ease: "easeOut" }}
+          >
             Bright <span className="text-primary">Smiles</span>, <br />
             Better <span className="text-primary">Care</span>
-          </h1>
+          </motion.h1>
 
           {/* Description */}
-          <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto md:mx-0 mb-8">
+          <motion.p
+            className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto md:mx-0 mb-8"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.3, duration: 0.8, ease: "easeOut" }}
+          >
             Experience professional dental care with comfort and precision. Our
             expert team is here to make your smile shine brighter every day.
-          </p>
+          </motion.p>
 
         
-         <div className="flex flex-col sm:flex-row gap-4">
+         <motion.div
+           className="flex flex-col sm:flex-row gap-4"
+           initial={{ opacity: 0, y: 20 }}
+           animate={{ opacity: 1, y: 0 }}
+           transition={{ delay: 0.6, duration: 0.8, ease: "easeOut" }}
+         >
                 <SignUpButton mode="modal">
                   <Button size={"lg"}>
                     <MicIcon className="mr-2 size-5" />
@@ -55,7 +76,7 @@ const Hero = () => {
                     Book appointment
                   </Button>
                 </SignUpButton>
-              </div>
+              </motion.div>
 
         </div>
 
