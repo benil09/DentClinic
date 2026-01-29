@@ -2,6 +2,9 @@ import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { MicIcon, CalendarIcon } from "lucide-react";
 
+import Link from "next/link";
+import { AnimatedBadge } from "@/components/ui/animated-badge";
+
 function CTA() {
   return (
     <section className="relative py-20 px-6 overflow-hidden bg-gradient-to-br from-muted/10 via-background to-muted/5">
@@ -13,10 +16,7 @@ function CTA() {
           {/* Left Content */}
           <div className="space-y-6">
             <div className="space-y-4">
-              <div className="inline-flex items-center gap-2 px-3 py-1 bg-gradient-to-r from-primary/5 to-primary/10 rounded-full border border-primary/10">
-                <div className="w-2 h-2 bg-primary rounded-full animate-pulse"></div>
-                <span className="text-xs font-medium text-primary">Ready When You Are</span>
-              </div>
+              <AnimatedBadge text="Ready When You Are" />
 
               <h2 className="text-3xl md:text-4xl font-bold leading-tight">
                 <span className="bg-gradient-to-br from-foreground to-foreground/70 bg-clip-text text-transparent">
@@ -29,7 +29,8 @@ function CTA() {
               </h2>
 
               <p className="text-lg text-muted-foreground leading-relaxed">
-                Join 1,200+ patients who trust our AI for instant guidance and personalized care.
+                Join 1,200+ patients who trust our AI for instant guidance and
+                personalized care.
               </p>
             </div>
 
@@ -38,17 +39,23 @@ function CTA() {
               <Button
                 size="lg"
                 className="px-6 py-3 font-semibold bg-gradient-to-r from-primary to-primary/90 hover:from-primary/95 hover:to-primary/85 shadow-lg hover:shadow-xl transition-all duration-300 rounded-xl"
+                asChild
               >
-                <MicIcon className="mr-2 h-4 w-4" />
-                Start free chat
+                <Link href="/chat">
+                  <MicIcon className="mr-2 h-4 w-4" />
+                  Start free chat
+                </Link>
               </Button>
               <Button
                 size="lg"
                 variant="outline"
                 className="px-6 py-3 font-semibold border border-primary/20 hover:border-primary/40 hover:bg-primary/5 transition-all duration-300 rounded-xl"
+                asChild
               >
-                <CalendarIcon className="mr-2 h-4 w-4" />
-                Book appointment
+                <Link className="text-primary" href="/book">
+                  <CalendarIcon className="mr-2 h-4 w-4 " />
+                  Book appointment
+                </Link>
               </Button>
             </div>
           </div>

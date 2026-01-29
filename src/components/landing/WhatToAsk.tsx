@@ -30,7 +30,7 @@ function WhatToAsk() {
           {/* Left Side - Interactive Chat Examples */}
           <div className="space-y-8">
             <div className="space-y-6">
-              <h3 className="text-2xl font-bold mb-8">Common questions our AI answers:</h3>
+              <h3 className="text-2xl font-bold text-gray-300 mb-8">Common questions our AI answers:</h3>
 
               {/* Chat Bubble 1 */}
               <div className="group relative">

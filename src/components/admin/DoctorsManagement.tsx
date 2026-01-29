@@ -13,16 +13,23 @@ import {
 } from "../ui/card";
 import AddDoctorDialog from "./AddDoctorDialog";
 import UpdateDoctorDialog from "./UpdateDoctorDialog";
+import { Doctor } from "@prisma/client";
 
 const DoctorsManagement = () => {
   const { data: doctors } = useGetDoctors();
 
   const [isAddDialogueOpen, setIsAddDialogueOpen] = useState(false);
   const [isEditDialogueOpen, setIsEditDialogueOpen] = useState(false);
-  const [selectedDoctor, setSelectedDoctor] = useState(null);
+  const [selectedDoctor, setSelectedDoctor] = useState <Doctor| null>(null);
 
-  const handleEditDoctor = () => {};
-  const handleCloseEditDoctor = () => {};
+  const handleEditDoctor = (doctor:Doctor) => {
+    setSelectedDoctor(doctor);
+    setIsEditDialogueOpen(true);
+  };
+  const handleCloseEditDoctor = () => {
+    setIsEditDialogueOpen(false);
+    setSelectedDoctor(null);
+  };
   return (
     <>
       <Card className="mb-8 sm:mb-12">
@@ -120,16 +127,18 @@ const DoctorsManagement = () => {
           </div>
         </CardContent>
       </Card>
-
       <AddDoctorDialog
         isOpen={isAddDialogueOpen}
         onClose={() => setIsAddDialogueOpen(false)}
       />
       <UpdateDoctorDialog
         isOpen={isEditDialogueOpen}
-        onClose={() => setIsEditDialogueOpen(false)}
+        onClose={handleCloseEditDoctor}
         doctor={selectedDoctor}
+        key={selectedDoctor?.id} //advanced react pattern to reset state
       />
+
+      
     </>
   );
 };

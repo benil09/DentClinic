@@ -81,7 +81,7 @@ function HowItWorks() {
                 <Image src="/audio.png" alt="Voice Chat" width={40} height={40} className="w-14" />
               </div>
 
-              <h3 className="text-2xl font-bold mb-4 text-center">Ask Questions</h3>
+              <h3 className="text-2xl font-bold text-primary mb-4 text-center">Ask Questions</h3>
               <p className="text-muted-foreground text-center leading-relaxed mb-6">
                 Chat with our AI assistant about any dental concerns. Get instant answers about
                 symptoms, treatments, and oral health tips.
@@ -118,7 +118,7 @@ function HowItWorks() {
                 <Image src="/brain.png" alt="AI Brain" width={40} height={40} className="w-14" />
               </div>
 
-              <h3 className="text-2xl font-bold mb-4 text-center">Get Expert Advice</h3>
+              <h3 className="text-2xl font-bold text-primary mb-4 text-center">Get Expert Advice</h3>
               <p className="text-muted-foreground text-center leading-relaxed mb-6">
                 Receive personalized recommendations based on thousands of dental cases. Our AI
                 provides professional-grade insights.
@@ -155,7 +155,7 @@ function HowItWorks() {
                 <Image src="/calendar.png" alt="Calendar" width={40} height={40} className="w-14" />
               </div>
 
-              <h3 className="text-2xl font-bold mb-4 text-center">Book & Get Care</h3>
+              <h3 className="text-2xl font-bold mb-4 text-primary text-center">Book & Get Care</h3>
               <p className="text-muted-foreground text-center leading-relaxed mb-6">
                 Schedule with verified dentists and receive comprehensive follow-up care. Track your
                 progress seamlessly.

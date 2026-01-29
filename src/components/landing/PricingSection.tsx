@@ -44,7 +44,7 @@ function PricingSection() {
                 <div className="space-y-3">
                   <h3 className="text-2xl font-bold">Free</h3>
                   <div className="flex items-end gap-1">
-                    <span className="text-4xl font-bold">$0</span>
+                    <span className="text-4xl text-gray-300 font-bold">$0</span>
                     <span className="text-muted-foreground mb-1">/month</span>
                   </div>
                   <p className="text-muted-foreground">Essential dental appointment booking</p>
@@ -55,7 +55,7 @@ function PricingSection() {
                   </Button>
                 </SignUpButton>
 
-                <div className="space-y-4">
+                <div className="space-y-4 text-gray-300/60">
                   <div className="flex items-start gap-3">
                     <CheckCircleIcon className="w-5 h-5 text-primary mt-0.5 shrink-0" />
                     <span className="text-sm">Unlimited appointment booking</span>
@@ -103,7 +103,7 @@ function PricingSection() {
                   Start AI Basic
                 </Button>
 
-                <div className="space-y-4">
+                <div className="space-y-4 text-gray-300/60">
                   <div className="flex items-start gap-3">
                     <CheckCircleIcon className="w-5 h-5 text-primary mt-0.5 shrink-0" />
                     <span className="text-sm">Everything in Free</span>
@@ -140,7 +140,7 @@ function PricingSection() {
                 <div className="space-y-3">
                   <h3 className="text-2xl font-bold">AI Pro</h3>
                   <div className="flex items-end gap-1">
-                    <span className="text-4xl font-bold">$19</span>
+                    <span className="text-4xl text-gray-300 font-bold">$19</span>
                     <span className="text-muted-foreground mb-1">/month</span>
                   </div>
                   <p className="text-muted-foreground">Unlimited AI consultations</p>
@@ -153,7 +153,7 @@ function PricingSection() {
                   Upgrade to AI Pro
                 </Button>
 
-                <div className="space-y-4">
+                <div className="space-y-4 text-gray-300/60">
                   <div className="flex items-start gap-3">
                     <CheckCircleIcon className="w-5 h-5 text-primary mt-0.5 shrink-0" />
                     <span className="text-sm">Everything in AI Basic</span>

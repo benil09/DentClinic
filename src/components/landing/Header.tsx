@@ -18,7 +18,7 @@ const header = () => {
             height={32}
             className="w-11"
           />
-          <span className="font-semibold text-lg"> Dentclinic </span>
+          <span className="font-semibold text-primary text-lg"> Dentclinic </span>
         </Link>
         <div className="hidden md:flex items-center gap-8  ">
           <a href="#" className="text-muted-foreground hover:text-foreground transition-all duration-200">How it Works </a>

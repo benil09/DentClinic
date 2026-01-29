@@ -14,7 +14,7 @@ function Footer() {
                 height={32}
                 className="w-8 h-8"
               />
-              <span className="font-semibold text-lg">DentWise</span>
+              <span className="font-semibold text-primary text-lg">DentWise</span>
             </div>
             <p className="text-sm text-muted-foreground leading-relaxed">
               AI-powered dental assistance that actually helps.
@@ -25,7 +25,7 @@ function Footer() {
 
           
           <div>
-            <h4 className="font-semibold text-base mb-4">Product</h4>
+            <h4 className="font-semibold text-primary text-base mb-4">Product</h4>
             <ul className="space-y-2 text-sm text-muted-foreground">
               <li>
                 <a href="#" className="hover:text-foreground">
@@ -46,10 +46,10 @@ function Footer() {
           </div>
 
           <div>
-            <h4 className="font-semibold text-base mb-4">Support</h4>
+            <h4 className="font-semibold text-base text-primary mb-4">Support</h4>
             <ul className="space-y-2 text-sm text-muted-foreground">
               <li>
-                <a href="#" className="hover:text-foreground">
+                <a href="#" className="hover:text-foreground ">
                   Help center
                 </a>
               </li>
@@ -67,7 +67,7 @@ function Footer() {
           </div>
 
           <div>
-            <h4 className="font-semibold text-base mb-4">Legal</h4>
+            <h4 className="font-semibold text-base mb-4 text-primary">Legal</h4>
             <ul className="space-y-2 text-sm text-muted-foreground">
               <li>
                 <a href="#" className="hover:text-foreground">
